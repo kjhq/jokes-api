@@ -1,4 +1,4 @@
-# 🎭 [Jokes API](https://github.com/ThunderDrag/jokes-api/)
+# 🎭 [Jokes API](https://github.com/kjhq/jokes-api/)
 
 ## 🌟 **About the API:**
 

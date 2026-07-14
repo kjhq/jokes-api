@@ -1,17 +1,27 @@
-# 🎭 [Jokes API](https://github.com/kjhq/jokes-api/)
+# jokes-api
 
-## 🌟 **About the API:**
+serverless joke api with token auth. random joke from dynamodb — no valid token, 401.
 
-This API fetches a random joke from its database. To access it, you'll need a valid authentication token. Without one, you'll face an HTTPS Status Code 401 error.
+![python](https://img.shields.io/badge/python-3776AB?style=flat-square&logo=python&logoColor=white)
+![aws lambda](https://img.shields.io/badge/aws%20lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
+![api gateway](https://img.shields.io/badge/api%20gateway-FF4F8B?style=flat-square&logo=amazonaws&logoColor=white)
+![dynamodb](https://img.shields.io/badge/dynamodb-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
 
-Here's what sets it apart:
-- Exception handling 🛠️
-- Detailed logging 📝
-- In the rare event of a server glitch, it'll advise you to pause usage and return an HTTPS Status Code 500 🚫
+---
 
-Under the hood, it's powered by AWS Lambda, AWS API Gateway, and AWS DynamoDB. 🚀
+## what it does
 
-## 📬 **Sample Request Header:**
+fetches a random joke from the database. requires a valid `auth` header. built on aws lambda, api gateway, and dynamodb.
+
+- proper auth checks
+- exception handling + logging
+- 500 on server errors with a clear message
+
+`python` `lambda` `api gateway` `dynamodb`
+
+---
+
+## sample request
 
 ```
 GET /Production/api/jokes HTTP/1.1
@@ -19,9 +29,11 @@ Host: h0zensjtaj.execute-api.ap-south-1.amazonaws.com
 auth: 0
 ```
 
-## 🎉 **Sample Successful Response:**
+---
 
-```
+## sample response
+
+```json
 {
     "content": "What did the ocean say to the beach? Nothing, it just waved.",
     "authenticationStatus": true,
@@ -29,10 +41,10 @@ auth: 0
 }
 ```
 
-## 📌 **Highlights:**
+---
 
-✅ Ensures Proper Authentication <br />
-✅ Robust Exception Handling <br />
-✅ Comprehensive Logging <br />
-✅ Built for Speed 🚀<br />
-✅ Delivers Possibly Hilarious Jokes 😂
+<div align="center">
+
+built by [kjhq](https://kjhq.dev) · [@kjhqdev](https://x.com/kjhqdev)
+
+</div>
